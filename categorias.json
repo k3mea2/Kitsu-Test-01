@@ -1,0 +1,502 @@
+[
+  {
+    "id": "1",
+    "titulo": "Middle School",
+    "slug": "middle-school",
+    "descripcion": "",
+    "totalMediaCount": 111,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:28.636Z",
+    "updatedAt": "2021-10-02T01:31:01.196Z"
+  },
+  {
+    "id": "2",
+    "titulo": "Cycling",
+    "slug": "cycling",
+    "descripcion": "",
+    "totalMediaCount": 19,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:28.722Z",
+    "updatedAt": "2021-10-02T01:31:01.621Z"
+  },
+  {
+    "id": "3",
+    "titulo": "Elementary School",
+    "slug": "elementary-school",
+    "descripcion": "The term elementary school is used in some countries for schools where children from the age of about five receive primary education.",
+    "totalMediaCount": 91,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:28.745Z",
+    "updatedAt": "2021-10-02T01:31:01.213Z"
+  },
+  {
+    "id": "4",
+    "titulo": "Mermaid",
+    "slug": "mermaid",
+    "descripcion": "A creature that is half-human (usually the upper body) and half-fish (usually the lower body). A male mermaid is called merman (but they can appear under many different names).",
+    "totalMediaCount": 53,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:28.770Z",
+    "updatedAt": "2021-10-02T01:30:58.992Z"
+  },
+  {
+    "id": "5",
+    "titulo": "Android",
+    "slug": "android",
+    "descripcion": "An android is a robot or synthetic organism designed to look and act like a human.",
+    "totalMediaCount": 227,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:28.792Z",
+    "updatedAt": "2021-10-02T01:30:58.806Z"
+  },
+  {
+    "id": "6",
+    "titulo": "All Girls School",
+    "slug": "all-girls-school",
+    "descripcion": "This school is only for female students. There may be a few male teachers though.",
+    "totalMediaCount": 147,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:29.320Z",
+    "updatedAt": "2021-10-02T01:31:01.231Z"
+  },
+  {
+    "id": "7",
+    "titulo": "Vampire",
+    "slug": "vampire",
+    "descripcion": "A vampire is a mythological or folkloric nocturnal undead. Vampires use long fangs to penetrate the necks of people, usually young females, to drink their blood, both as a form of nourishment and to turn the targets into slaves.\n\nIn the classic vampire stories, they are thought to have no reflection in mirrors, are able to shapeshift into bats (sometimes also wolves or some form of fog), have unlimited lifespan and superhuman strength, reflexes and senses, and may only be killed by silver bullets, silver blades, a stake through the heart, fire, or exposure to sunlight; on the other hand, they cannot tolerate garlic, holy water, or Christian crosses (sometimes expanded to religious symbols in general).\n\nIn modern anime, these limitations are usually dropped, and they become far more powerful and fearsome opponents than usual. A human bitten, or sometimes even scratched, by a vampire typically becomes a slave, eventually dying as if poisoned, and becoming a vampire, ghoul, zombie, or other form of undead after death, often staying under the command of the vampire who originally bit them.",
+    "totalMediaCount": 769,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:30.558Z",
+    "updatedAt": "2021-10-02T01:30:58.336Z"
+  },
+  {
+    "id": "8",
+    "titulo": "Wrestling",
+    "slug": "wrestling",
+    "descripcion": "Wrestling is a fight between two people without weapons, in which each person tries to beat their opponent. Wrestlers use clinching, holding, locking, and leverage. It resembles ritual fighting as it avoids things that will likely lead to serious injury. It is similar to military hand-to-hand combat or self-defence systems.",
+    "totalMediaCount": 33,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:30.856Z",
+    "updatedAt": "2021-10-02T01:31:01.661Z"
+  },
+  {
+    "id": "9",
+    "titulo": "Samurai",
+    "slug": "samurai",
+    "descripcion": "",
+    "totalMediaCount": 493,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:30.881Z",
+    "updatedAt": "2021-10-02T01:30:58.528Z"
+  },
+  {
+    "id": "10",
+    "titulo": "Elf",
+    "slug": "elf",
+    "descripcion": "The origin of Elves (Norse; álfar(elves), álfr(elf)) can be found in ancient Norse mythology, in which, elves are described as divine, or near-divine, race of humanoids (Vættir), likened to the Æsir. In common description they are described as sage and immortal beings occupying the threshold between humans and the gods. In some cases humans that were beloved by the gods became elves within their lives. Ancient Elves are delineated into a pair of similar but distinct races; Light Elves (Ljósálfar) and Dark Elves (Svartálfar), each originating from separate homes within the nine worlds of Yggdrasil. Within the Poetic Edda the differences are commonly ascribed as:\n\n\"There is one place there that is called the Elf Home (Álfheimr which is the elven city). People live there that are named the light elves (Ljósálfar). But the dark elves (Dökkálfar) live below in earth, in caves and the dark forest and they are unlike them in appearance - and more unlike them in reality. The Light Elves are brighter than the sun in appearance, but the Dark Elves are blacker than pitch.\" (Snorri, Gylfaginning 17, Prose Edda)",
+    "totalMediaCount": 346,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:31.311Z",
+    "updatedAt": "2021-10-02T01:30:59.009Z"
+  },
+  {
+    "id": "11",
+    "titulo": "Pirate",
+    "slug": "pirate",
+    "descripcion": "Those who take to the high seas (or space) to rob ships or search for treasure.",
+    "totalMediaCount": 102,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:32.006Z",
+    "updatedAt": "2021-10-02T01:31:01.380Z"
+  },
+  {
+    "id": "12",
+    "titulo": "Bishounen",
+    "slug": "bishounen",
+    "descripcion": "Young man whose beauty (and sexual appeal) transcends the boundary of gender or sexual orientation.",
+    "totalMediaCount": 164,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:32.258Z",
+    "updatedAt": "2021-10-02T01:30:59.665Z"
+  },
+  {
+    "id": "13",
+    "titulo": "Tentacle",
+    "slug": "tentacle",
+    "descripcion": "A tentacle or bothrium (plural: bothria) is one of usually two or more elongated flexible organs present in animals, especially invertebrates. Usually, Tentacles are used for feeding, feeling and grasping.",
+    "totalMediaCount": 176,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:32.282Z",
+    "updatedAt": "2021-10-02T01:30:59.678Z"
+  },
+  {
+    "id": "15",
+    "titulo": "Boxing",
+    "slug": "boxing",
+    "descripcion": "",
+    "totalMediaCount": 46,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:32.894Z",
+    "updatedAt": "2021-10-02T01:31:01.699Z"
+  },
+  {
+    "id": "16",
+    "titulo": "Musical Band",
+    "slug": "musical-band",
+    "descripcion": "A musical ensemble also known as a music(al) group or music(al) band is a group of people who perform instrumental or vocal music, typically known by a distinct name.",
+    "totalMediaCount": 116,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:33.246Z",
+    "updatedAt": "2021-10-02T01:31:02.048Z"
+  },
+  {
+    "id": "18",
+    "titulo": "Cooking",
+    "slug": "cooking",
+    "descripcion": "Cooking, baking or otherwise producing food.",
+    "totalMediaCount": 413,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:34.267Z",
+    "updatedAt": "2021-10-02T01:31:01.054Z"
+  },
+  {
+    "id": "19",
+    "titulo": "Air Force",
+    "slug": "air-force",
+    "descripcion": "An air force, also known in some countries as an air army or air corps, is in the broadest sense, the national military organization that primarily conducts aerial warfare. More specifically, it is the branch of a nation's armed services that is responsible for aerial warfare as distinct from an army, navy or other branch. Typically, air forces are responsible for gaining control of the air, carrying out strategic-bombing missions and providing support to surface forces.\n\nThe term \"air force\" may also refer to a tactical air force or numbered air force, which is an operational formation within a national air force. Air forces typically consist of a combination of fighters, bombers, helicopters, transport planes and other aircraft.",
+    "totalMediaCount": 49,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:34.295Z",
+    "updatedAt": "2021-10-02T01:31:02.249Z"
+  },
+  {
+    "id": "21",
+    "titulo": "Bounty Hunter",
+    "slug": "bounty-hunter",
+    "descripcion": "Involve hunting down criminals (or other wanted individuals) for money or fame.",
+    "totalMediaCount": 39,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:34.881Z",
+    "updatedAt": "2021-10-02T01:31:01.397Z"
+  },
+  {
+    "id": "22",
+    "titulo": "High School",
+    "slug": "high-school",
+    "descripcion": "A secondary school that usually contains grades 10 through 12 in Japan, or 9 through 12 in America.",
+    "totalMediaCount": 1033,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:34.917Z",
+    "updatedAt": "2021-10-02T01:31:01.253Z"
+  },
+  {
+    "id": "23",
+    "titulo": "Delinquent",
+    "slug": "delinquent",
+    "descripcion": "Delinquents - Every school has them, but not all anime with school setting make delinquents a central topic. There are several versions of these delinquents, though some are grounded on a misunderstanding:\n\n* The student with a really bad image and attitude, based on his real criminal actions outside of the school and is even feared by teachers.\n* The primitive \"class bully\" that pushes around (\"clobbers\") his classmates for no apparent reason, possibly extorting lunch money.\n* The student with an sinister complexion or \"evil eye\", but is actually a \"good\" student (unfoundedly feared character).\n* The rebellious student, who does not care for studying, but is otherwise docile. Called a \"delinquent\" as a joke.",
+    "totalMediaCount": 278,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:34.970Z",
+    "updatedAt": "2021-10-02T01:31:01.281Z"
+  },
+  {
+    "id": "24",
+    "titulo": "Maid",
+    "slug": "maid",
+    "descripcion": "A maid is a female employed in domestic service. They usually wear uniforms. Since their nature is to be obedient and serve their goshujin-sama (master), they are one of the most desired types of women in Japan, a dream of every Japanese man, particularly otaku. Often seen in so-called Maid Cafes in Akihabara, where male customers can for a little time enjoy the feeling of being served by a woman. The male gender opposite is the butler.",
+    "totalMediaCount": 271,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:35.412Z",
+    "updatedAt": "2021-10-02T01:30:59.728Z"
+  },
+  {
+    "id": "25",
+    "titulo": "Magic",
+    "slug": "magic",
+    "descripcion": "Magic is the art of purportedly manipulating aspects of reality either by supernatural means or through knowledge of unknown occult laws.",
+    "totalMediaCount": 4025,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:36.191Z",
+    "updatedAt": "2021-10-02T01:30:59.023Z"
+  },
+  {
+    "id": "26",
+    "titulo": "Cyborg",
+    "slug": "cyborg",
+    "descripcion": "A cyborg is a cybernetic organism (i.e. an organism that has both artificial and natural systems). The term was coined in 1960 when Manfred Clynes and Nathan Kline used it in an article about the advantages of self-regulating human-machine systems in outer space. D. S. Halacy's Cyborg: Evolution of the Superman in 1965 featured an introduction which spoke of a \"new frontier\" that was \"not merely space, but more profoundly the relationship between 'inner space' to 'outer space' -a bridge...between mind and matter.\" The cyborg is often seen today merely as an organism that has enhanced abilities due to technology, but this perhaps oversimplifies the category of feedback.\n\nFictional cyborgs are portrayed as a synthesis of organic and synthetic parts, and frequently pose the question of difference between human and machine as one concerned with morality, free will, and empathy. Fictional cyborgs may be represented as visibly mechanical (e.g. the Cybermen in the Doctor Who franchise or The Borg from Star Trek); or as almost indistinguishable from humans (e.g. the \"Human\" Cylons from the re-imagining of Battlestar Galactica). The 1970s television series The Six Million Dollar Man featured one of the most famous fictional cyborgs. Cyborgs in fiction often play up a human contempt for over-dependence on technology, particularly when used for war, and when used in ways that seem to threaten free will. Cyborgs are also often portrayed with physical or mental abilities far exceeding a human counterpart (military forms may have inbuilt weapons, among other things).\n\nReal (as opposed to fictional) cyborgs are more frequently people who use cybernetic technology to repair or overcome the physical and mental constraints of their bodies. While cyborgs are commonly thought of as mammals, they can be any kind of organism.\n\n[Source: wiki]",
+    "totalMediaCount": 140,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:36.891Z",
+    "updatedAt": "2021-10-02T01:30:58.686Z"
+  },
+  {
+    "id": "27",
+    "titulo": "Alien",
+    "slug": "alien",
+    "descripcion": "This entity or creature was born on another world than the main characters.",
+    "totalMediaCount": 509,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:37.214Z",
+    "updatedAt": "2021-10-02T01:30:58.647Z"
+  },
+  {
+    "id": "28",
+    "titulo": "Zombie",
+    "slug": "zombie",
+    "descripcion": "A zombie is asserted to be a reanimated corpse, or a human who is being controlled by someone else by use of magic with some media renditions using a pandemic illness to explain their existence.Stories of zombies originated in the West African spiritual belief system of voodoo, which told of the people being controlled as laborers by a powerful wizard.",
+    "totalMediaCount": 280,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:37.239Z",
+    "updatedAt": "2021-10-02T01:30:58.350Z"
+  },
+  {
+    "id": "29",
+    "titulo": "Robot",
+    "slug": "robot",
+    "descripcion": "A robot is an automatically guided machine, able to do tasks on its own. Another common characteristic is that by its appearance or movements, a robot often conveys a sense that it has intent or agency of its own.\n\nNot to be confused with android (human-like robot).",
+    "totalMediaCount": 294,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:37.281Z",
+    "updatedAt": "2021-10-02T01:30:58.811Z"
+  },
+  {
+    "id": "30",
+    "titulo": "Martial Arts",
+    "slug": "martial-arts",
+    "descripcion": "Various sports or skills, mainly of Japanese origin, that originated as forms of self-defense or attack, such as judo, karate, and kendo.",
+    "totalMediaCount": 2527,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:37.305Z",
+    "updatedAt": "2021-10-02T01:30:58.471Z"
+  },
+  {
+    "id": "31",
+    "titulo": "Angel",
+    "slug": "angel",
+    "descripcion": "An angel is a supernatural being, said to be the messenger of God. They are often depicted as human beings with a pair of white feathered wings and sometimes with a halo.\nIn contrast, a fallen angel who has turned evil will be depicted with black wings.",
+    "totalMediaCount": 146,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:37.741Z",
+    "updatedAt": "2021-10-02T01:30:59.036Z"
+  },
+  {
+    "id": "32",
+    "titulo": "Waitress",
+    "slug": "waitress",
+    "descripcion": "A female attendant who serves customers in a restaurant, café, or similar.\nSource: Wiktionary",
+    "totalMediaCount": 35,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:38.414Z",
+    "updatedAt": "2021-10-02T01:30:59.742Z"
+  },
+  {
+    "id": "33",
+    "titulo": "Dragon",
+    "slug": "dragon",
+    "descripcion": "Very intelligent mythical beings - a cross between a very large lizard and a dinosaur - that breath fire, and have a knack for kidnapping damsels, thus distressing them. In Fantasy anime this perceptive species often lives secluded from human civilisation, protectors of long lost knowledge. Dragons seem to be on the verge of extinction.",
+    "totalMediaCount": 325,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:39.228Z",
+    "updatedAt": "2021-10-02T01:30:59.048Z"
+  },
+  {
+    "id": "34",
+    "titulo": "Assassin",
+    "slug": "assassin",
+    "descripcion": "Stories about those who kill for money.",
+    "totalMediaCount": 195,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:40.130Z",
+    "updatedAt": "2021-10-02T01:31:01.413Z"
+  },
+  {
+    "id": "35",
+    "titulo": "Idol",
+    "slug": "idol",
+    "descripcion": "In Japanese culture, idols (アイドル) are media personalities in their teens and early twenties who are considered particularly cute and cuddly and who will, for a period ranging from several months to a few years, regularly appear in the mass media, e.g. as singers for J-pop groups, bit-part actors, TV personalities, models in photo spreads published in magazines, advertisements, etc.Source: wiki",
+    "totalMediaCount": 1087,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:40.877Z",
+    "updatedAt": "2021-10-02T01:31:02.068Z"
+  },
+  {
+    "id": "36",
+    "titulo": "Nurse",
+    "slug": "nurse",
+    "descripcion": "For hentai shows, it's enough if a nurse costume is worn without the female character actually working as a nurse.\n\nFor ecchi shows, the nurse profession must play a big enough part in the overall setting.\n\nAlmost completely exclusive to hentai animations.",
+    "totalMediaCount": 53,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:41.497Z",
+    "updatedAt": "2021-10-02T01:30:59.755Z"
+  },
+  {
+    "id": "37",
+    "titulo": "Magical Girl",
+    "slug": "magical-girl",
+    "descripcion": "Magical girls (also known both in Japan and in the West as mahou shoujo, and in Japan as majokko) are young girls with superhuman abilities of magical nature. In the early years, magical girls usually used magic to solve everyday problems and often transformed into idols; nowadays, however, the term is most often used to refer to with girls who fight evil using magical powers, and, although transformations are still common, they tend to be more along the lines of a change of costume.",
+    "totalMediaCount": 683,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:42.298Z",
+    "updatedAt": "2021-10-02T01:30:58.368Z"
+  },
+  {
+    "id": "38",
+    "titulo": "Ghost",
+    "slug": "ghost",
+    "descripcion": "In traditional belief, a ghost is the soul or spirit of a deceased person or animal that can appear, in visible form or other manifestation, to the living. Descriptions of the apparition of ghosts vary widely: The mode of manifestation can range from an invisible presence to translucent or wispy shapes, to realistic, life-like visions.",
+    "totalMediaCount": 354,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:42.835Z",
+    "updatedAt": "2021-10-02T01:30:58.381Z"
+  },
+  {
+    "id": "39",
+    "titulo": "Cross Dressing",
+    "slug": "cross-dressing",
+    "descripcion": "This character sometimes wears clothes traditionally worn by and associated with the opposite sex.\n\nCross-dressers often hide their cross-dressing identity for a long period of time and thus tend to become adept in accurately portraying the opposite sex in terms of voice, movement, behaviour, temperament, etc.",
+    "totalMediaCount": 371,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:42.863Z",
+    "updatedAt": "2021-10-02T01:30:59.767Z"
+  },
+  {
+    "id": "40",
+    "titulo": "Loli",
+    "slug": "loli",
+    "descripcion": "Lolita (often also just abbreviated to loli) refers originally to a novel by Vladimir Nabokov. The book is internationally famous for its controversial subject: the narrator and protagonist, middle aged Humbert Humbert, becomes obsessed and sexually involved with a 12-year-old girl named Dolores Haze.Nowadays the name \"Lolita\" describes a sexually precocious young girl.Related to this is lolicon, the Japanese abbreviation of the English phrase \"Lolita Complex\". Sometimes written as \"roricon\" or \"rorikon\" due to the inexact mapping between Japanese and English phonemes. This is the term used to describe the fetish/fascination some mature people have for underage girls. There is an entire industry in Japan devoted to providing legal but schoolgirl-themed pornography, taking advantage of the cute childlike appearance some Japanese women maintain well into their twenties.Because the characters in anime are often young by convention, many fans think that a character can only be Lolicon if she is twelve or younger. Exceptions are granted if the other character in the relationship is a lot older.One particular device used to skirt the boundaries of taste and legality is the exotic being (alien, creature of magic, robot or the like) which takes the form of an underage human girl, but is in fact for all other practical purposes an adult.Another reason why lolicon is fetishized by people may be because some of them just view it as a substitute for their fetish for flat-chested, but otherwise well-developed, women.Source: Wikipedia / TV Tropes",
+    "totalMediaCount": 681,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:45.142Z",
+    "updatedAt": "2021-10-02T01:30:59.780Z"
+  },
+  {
+    "id": "41",
+    "titulo": "Deity",
+    "slug": "deity",
+    "descripcion": "Some religions say that there is a supernatural being called God. Other religions say there is more than one god. A supernatural being is also sometimes called a deity. Many religions believe that a deity created everything that exists. In most religions, a god is believed to be immortal (cannot die), and to have powers to control nature far beyond the powers of humans.",
+    "totalMediaCount": 197,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:46.580Z",
+    "updatedAt": "2021-10-02T01:30:59.062Z"
+  },
+  {
+    "id": "42",
+    "titulo": "Ninja",
+    "slug": "ninja",
+    "descripcion": "A ninja was a covert agent or mercenary of feudal Japan specializing in unorthodox arts of war.\n\nThe functions of the ninja included espionage, sabotage, infiltration, and assassination, as well as open combat in certain situations.\nThe ninja, using covert methods of waging war, were contrasted with the samurai, who had strict rules about honor and combat.",
+    "totalMediaCount": 159,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:46.803Z",
+    "updatedAt": "2021-10-02T01:30:58.466Z"
+  },
+  {
+    "id": "43",
+    "titulo": "Office Lady",
+    "slug": "office-lady",
+    "descripcion": "An office lady, often abbreviated OL, is a female office worker in Japan who performs generally pink collar tasks such as serving tea and secretarial or clerical work. Like many unmarried Japanese, OLs often live with their parents well into early adulthood. Office ladies are usually full-time permanent staff, although the jobs they do usually have little opportunity for promotion, and there is usually the tacit expectation that they leave their jobs once they get married.\n\nOL stock characters are frequently found in josei manga and anime, often portrayed as attractive, clever, and wistful individuals bored with their jobs, over-pressured by their families, and facing psychological issues.",
+    "totalMediaCount": 270,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:46.831Z",
+    "updatedAt": "2021-10-02T01:30:59.792Z"
+  },
+  {
+    "id": "44",
+    "titulo": "Gunfights",
+    "slug": "gunfights",
+    "descripcion": "Fights where two or more parties are firing guns at one another.",
+    "totalMediaCount": 310,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:46.860Z",
+    "updatedAt": "2021-10-02T01:30:58.483Z"
+  },
+  {
+    "id": "45",
+    "titulo": "Battle Royale",
+    "slug": "battle-royale",
+    "descripcion": "Many characters are removed from their normal lives or lifestyles and thrown into a game where they are forced to battle each other until one survivor remains. Much like the famous film 'Battle Royale'.",
+    "totalMediaCount": 75,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:46.892Z",
+    "updatedAt": "2021-10-02T01:30:58.498Z"
+  },
+  {
+    "id": "46",
+    "titulo": "Swordplay",
+    "slug": "swordplay",
+    "descripcion": "The act or art of using a sword or similar weapon skillfully.",
+    "totalMediaCount": 697,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:46.923Z",
+    "updatedAt": "2021-10-02T01:30:58.534Z"
+  },
+  {
+    "id": "47",
+    "titulo": "Super Power",
+    "slug": "super-power",
+    "descripcion": "Be it an ancient Greek Heracles, a cybernetic muscle-man, or a fourteen year-old girl in a mini-skirted sailor suit. As long as they have super powers, they're in the show.",
+    "totalMediaCount": 1930,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:46.954Z",
+    "updatedAt": "2021-10-02T01:30:58.410Z"
+  },
+  {
+    "id": "48",
+    "titulo": "Present",
+    "slug": "present",
+    "descripcion": "Somewhere between past and future",
+    "totalMediaCount": 2449,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:46.987Z",
+    "updatedAt": "2021-10-02T01:31:00.157Z"
+  },
+  {
+    "id": "49",
+    "titulo": "Past",
+    "slug": "past",
+    "descripcion": "Anime that takes place in the past or clearly seems to take place in the past in case of an alternative universe. This category should almost always go together with one of its sub-categories, because the past can either be a depiction of a historical event(s) or not, in which case it would be alternative past.",
+    "totalMediaCount": 623,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:47.017Z",
+    "updatedAt": "2021-10-02T01:31:00.191Z"
+  },
+  {
+    "id": "50",
+    "titulo": "Future",
+    "slug": "future",
+    "descripcion": "Anime that fall under the future category are the ones that have a society that could have originated from ours. In most cases it should go hand to hand with sci-fi since we expect the future to consist of advanced technology, however, in the case where it's explicitly stated in the story that the anime takes place \"x years into the future\", the state of technology doesn't matter as long as it's long into the future. The anime can be set in an alternative universe not tied with our own, as long as it has a futuristic feel to it.This category sports quite a lot of anime, mostly stemming from SciFi, but not necessarily only from there.",
+    "totalMediaCount": 775,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:47.047Z",
+    "updatedAt": "2021-10-02T01:31:00.384Z"
+  },
+  {
+    "id": "51",
+    "titulo": "Space",
+    "slug": "space",
+    "descripcion": "The final frontier.",
+    "totalMediaCount": 901,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:47.070Z",
+    "updatedAt": "2021-10-02T01:31:00.433Z"
+  },
+  {
+    "id": "52",
+    "titulo": "Fantasy World",
+    "slug": "fantasy-world",
+    "descripcion": "A fantasy world is a type of imaginary world, part of a fictional universe. Typical worlds involve, but are not limited to magic or magical abilities and a medieval theme. Some examples include: a parallel world tenuously connected to Earth via magical portals or items; a fictional Earth-like planet in the remote past or future; or an entirely independent world set in another universe. Many fantasy worlds draw heavily on real world history, geography and sociology, and also on folklore.",
+    "totalMediaCount": 1532,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:47.099Z",
+    "updatedAt": "2021-10-02T01:31:00.535Z"
+  },
+  {
+    "id": "53",
+    "titulo": "Desert",
+    "slug": "desert",
+    "descripcion": "Setting with vast amounts of sand, merciless high temperatures, and very little water.",
+    "totalMediaCount": 25,
+    "nsfw": false,
+    "createdAt": "2017-05-31T06:38:47.125Z",
+    "updatedAt": "2021-10-02T01:31:00.548Z"
+  }
+]

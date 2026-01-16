@@ -9,10 +9,17 @@
     "serve": "redoc-cli serve kitsu.yml --options.hideLoading=false --options.pathInMiddlePanel=false --options.nativeScrollbars=true --options.expandSingleSchemaField=true --options.requiredPropsFirst=true --options.sortPropsAlphabetically=true --options.hideSingleRequestSampleTab=true --options.theme.typography.links.color=#f75239 --options.theme.colors.primary.main=#464646 --options.theme.colors.success.main=#19b698 --options.theme.colors.warning.main=#f39c12 --options.theme.colors.error.main=#ff4136 --options.theme.colors.text.primary=#464646 --options.theme.rightPanel.backgroundColor=#332532 --options.theme.rightPanel.textColor=#edf0f1 --options.theme.sidebar.backgroundColor=#332532 --options.theme.sidebar.textColor=#edf0f1 --options.theme.sidebar.level1Items.textTransform=capitalize --options.theme.typography.fontSize=1rem --options.theme.typography.code.fontSize=1rem --options.theme.typography.headings.lineHeight=1.1 --options.theme.typography.headings.fontWeight=700 --options.theme.schema.arrow.size=1rem --options.theme.typography.lineHeight=1.5rem --options.theme.colors.border.dark=#332532 --options.theme.colors.border.light=#edf0f1 --options.jsonSampleExpandLevel=2 --options.simpleOneOfTypeLabel=true --options.expandResponses=\"200,201\" --options.theme.schema.labelsTextSize=0.9rem",
     "serve:bundle": "redoc-cli bundle kitsu.yml --output docs/index.html --options.hideLoading=false --options.pathInMiddlePanel=false --options.nativeScrollbars=true --options.expandSingleSchemaField=true --options.requiredPropsFirst=true --options.sortPropsAlphabetically=true --options.hideSingleRequestSampleTab=true --options.theme.typography.links.color=#f75239 --options.theme.colors.primary.main=#464646 --options.theme.colors.success.main=#19b698 --options.theme.colors.warning.main=#f39c12 --options.theme.colors.error.main=#ff4136 --options.theme.colors.text.primary=#464646 --options.theme.rightPanel.backgroundColor=#332532 --options.theme.rightPanel.textColor=#edf0f1 --options.theme.sidebar.backgroundColor=#332532 --options.theme.sidebar.textColor=#edf0f1 --options.theme.sidebar.level1Items.textTransform=capitalize --options.theme.typography.fontSize=1rem --options.theme.typography.code.fontSize=1rem --options.theme.typography.headings.lineHeight=1.1 --options.theme.typography.headings.fontWeight=700 --options.theme.schema.arrow.size=1rem --options.theme.typography.lineHeight=1.5rem --options.theme.colors.border.dark=#332532 --options.theme.colors.border.light=#edf0f1 --options.jsonSampleExpandLevel=2 --options.simpleOneOfTypeLabel=true --options.expandResponses=\"200,201\" --options.theme.schema.labelsTextSize=0.9rem",
     "start": "yarn build && yarn lint && yarn serve",
-    "start:bundle": "yarn build && yarn lint && yarn serve:bundle"
+    "start:bundle": "yarn build && yarn lint && yarn serve:bundle",
+    "test": "jest"
   },
   "dependencies": {
     "@redocly/openapi-cli": "1.0.0-beta.79",
     "redoc-cli": "0.13.2"
+  },
+  "devDependencies": {
+    "@apidevtools/swagger-parser": "^10.1.0",
+    "axios": "^1.13.2",
+    "jest": "^29.7.0",
+    "yaml": "^2.3.4"
   }
 }

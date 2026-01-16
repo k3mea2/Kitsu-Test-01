@@ -1,0 +1,381 @@
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                  GUÍA DE VOLCADO A BASE DE DATOS - KITSU API                  ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+═══════════════════════════════════════════════════════════════════════════════
+                          ARCHIVOS GENERADOS
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ animes.json      - 50 animes con toda su información
+✅ categorias.json  - 50 categorías de anime/manga
+✅ posts.json       - 30 posts recientes de la comunidad
+
+═══════════════════════════════════════════════════════════════════════════════
+              OPCIÓN 1: ARCHIVOS JSON (YA EJECUTADO)
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ No requiere instalación de base de datos
+✅ Archivos listos para usar
+✅ Fácil de leer y compartir
+
+ESTRUCTURA DE animes.json:
+{
+  "id": "1",
+  "titulo": "Cowboy Bebop",
+  "sinopsis": "In the year 2071...",
+  "tipo": "TV",
+  "estado": "finished",
+  "episodios": 26,
+  "rating": "82.24",
+  "popularidad": 123456,
+  ...
+}
+
+CÓMO USAR LOS ARCHIVOS JSON:
+-----------------------------
+
+# Ver los animes guardados
+cat animes.json | jq '.[0]'
+
+# Contar cuántos animes hay
+cat animes.json | jq 'length'
+
+# Buscar un anime específico
+cat animes.json | jq '.[] | select(.titulo | contains("Naruto"))'
+
+# Animes con rating mayor a 80
+cat animes.json | jq '.[] | select(.rating | tonumber > 80)'
+
+MODIFICAR LA CANTIDAD DE REGISTROS:
+------------------------------------
+
+// En volcar-a-bd.js, cambiar:
+await volcarAnimesAJSON(100, 'animes.json');     // 100 animes
+await volcarCategoriasAJSON(200, 'categorias.json'); // 200 categorías
+await volcarPostsAJSON(50, 'posts.json');        // 50 posts
+
+═══════════════════════════════════════════════════════════════════════════════
+              OPCIÓN 2: MONGODB
+═══════════════════════════════════════════════════════════════════════════════
+
+INSTALACIÓN:
+------------
+
+# 1. Instalar MongoDB (Ubuntu/Debian)
+sudo apt-get install mongodb
+
+# O descargar desde: https://www.mongodb.com/try/download/community
+
+# 2. Iniciar MongoDB
+sudo systemctl start mongodb
+sudo systemctl status mongodb
+
+# 3. Instalar driver de Node.js
+npm install mongodb
+
+CONFIGURACIÓN:
+--------------
+
+// En tu código, descomentar:
+await volcarAnimesAMongoDB(
+  100,                              // Cantidad de animes
+  'mongodb://localhost:27017',      // URL de conexión
+  'kitsu'                           // Nombre de la base de datos
+);
+
+EJECUTAR:
+---------
+
+node volcar-a-bd.js
+
+CONSULTAR LOS DATOS:
+--------------------
+
+# Conectar a MongoDB
+mongosh
+
+# Usar la base de datos
+use kitsu
+
+# Ver todos los animes
+db.animes.find().pretty()
+
+# Contar animes
+db.animes.countDocuments()
+
+# Buscar por título
+db.animes.find({ titulo: /Naruto/i })
+
+# Animes con rating mayor a 80
+db.animes.find({ rating: { $gt: 80 } })
+
+# Top 10 más populares
+db.animes.find().sort({ popularidad: -1 }).limit(10)
+
+═══════════════════════════════════════════════════════════════════════════════
+              OPCIÓN 3: MySQL / MariaDB
+═══════════════════════════════════════════════════════════════════════════════
+
+INSTALACIÓN:
+------------
+
+# 1. Instalar MySQL (Ubuntu/Debian)
+sudo apt-get install mysql-server
+
+# 2. Configurar MySQL
+sudo mysql_secure_installation
+
+# 3. Crear base de datos
+sudo mysql
+CREATE DATABASE kitsu;
+CREATE USER 'kitsu_user'@'localhost' IDENTIFIED BY 'tu_password';
+GRANT ALL PRIVILEGES ON kitsu.* TO 'kitsu_user'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+
+# 4. Instalar driver de Node.js
+npm install mysql2
+
+CONFIGURACIÓN:
+--------------
+
+// En tu código, descomentar:
+await volcarAnimesAMySQL(100, {
+  host: 'localhost',
+  user: 'kitsu_user',
+  password: 'tu_password',
+  database: 'kitsu'
+});
+
+EJECUTAR:
+---------
+
+node volcar-a-bd.js
+
+CONSULTAR LOS DATOS:
+--------------------
+
+# Conectar a MySQL
+mysql -u kitsu_user -p kitsu
+
+# Ver todos los animes
+SELECT * FROM animes;
+
+# Contar animes
+SELECT COUNT(*) FROM animes;
+
+# Buscar por título
+SELECT * FROM animes WHERE titulo LIKE '%Naruto%';
+
+# Animes con rating mayor a 80
+SELECT * FROM animes WHERE rating > 80 ORDER BY rating DESC;
+
+# Top 10 más populares
+SELECT titulo, popularidad, rating 
+FROM animes 
+ORDER BY popularidad DESC 
+LIMIT 10;
+
+# Animes por tipo
+SELECT tipo, COUNT(*) as cantidad 
+FROM animes 
+GROUP BY tipo;
+
+═══════════════════════════════════════════════════════════════════════════════
+              OPCIÓN 4: SQLite (RECOMENDADO PARA PRINCIPIANTES)
+═══════════════════════════════════════════════════════════════════════════════
+
+INSTALACIÓN:
+------------
+
+# Solo instalar el driver de Node.js
+npm install better-sqlite3
+
+# SQLite no requiere servidor, crea un archivo .db
+
+CONFIGURACIÓN:
+--------------
+
+// En tu código, descomentar:
+await volcarAnimesASQLite(100, 'kitsu.db');
+
+EJECUTAR:
+---------
+
+node volcar-a-bd.js
+
+CONSULTAR LOS DATOS:
+--------------------
+
+# Instalar sqlite3 CLI
+sudo apt-get install sqlite3
+
+# Abrir la base de datos
+sqlite3 kitsu.db
+
+# Comandos dentro de sqlite3:
+.tables                    # Ver tablas
+.schema animes            # Ver estructura de tabla
+
+# Consultas SQL
+SELECT * FROM animes;
+SELECT COUNT(*) FROM animes;
+SELECT * FROM animes WHERE titulo LIKE '%Naruto%';
+SELECT * FROM animes WHERE rating > 80 ORDER BY rating DESC;
+SELECT * FROM animes ORDER BY popularidad DESC LIMIT 10;
+
+.quit                     # Salir
+
+═══════════════════════════════════════════════════════════════════════════════
+              EJEMPLOS DE USO DEL ARCHIVO volcar-a-bd.js
+═══════════════════════════════════════════════════════════════════════════════
+
+EJEMPLO 1: Volcar diferentes cantidades
+----------------------------------------
+
+const { volcarAnimesAJSON } = require('./volcar-a-bd');
+
+// Volcar 200 animes
+await volcarAnimesAJSON(200, 'animes_completo.json');
+
+// Volcar solo los Top 20 más populares
+// Modificar la función para incluir sort=-userCount
+
+
+EJEMPLO 2: Volcar a múltiples formatos
+---------------------------------------
+
+const volcado = require('./volcar-a-bd');
+
+async function volcarTodo() {
+  // A JSON
+  await volcado.volcarAnimesAJSON(100, 'animes.json');
+  
+  // A SQLite
+  await volcado.volcarAnimesASQLite(100, 'kitsu.db');
+  
+  // A MongoDB (si está instalado)
+  // await volcado.volcarAnimesAMongoDB(100);
+}
+
+volcarTodo();
+
+
+EJEMPLO 3: Volcar categorías específicas
+-----------------------------------------
+
+const axios = require('axios');
+const fs = require('fs').promises;
+
+async function volcarAccion() {
+  const response = await axios.get(
+    'https://kitsu.io/api/edge/anime?filter[categories]=action&page[limit]=50',
+    {
+      headers: {
+        'Accept': 'application/vnd.api+json',
+        'Content-Type': 'application/vnd.api+json'
+      }
+    }
+  );
+  
+  await fs.writeFile(
+    'animes_accion.json',
+    JSON.stringify(response.data.data, null, 2)
+  );
+}
+
+═══════════════════════════════════════════════════════════════════════════════
+                          AUTOMATIZACIÓN
+═══════════════════════════════════════════════════════════════════════════════
+
+CREAR UN SCRIPT DE BACKUP DIARIO:
+----------------------------------
+
+# Crear archivo: backup-kitsu.sh
+
+#!/bin/bash
+cd /home/adrian/Escritorio/AT/Kitsu-Test-01
+node volcar-a-bd.js
+echo "Backup completado: $(date)" >> backup.log
+
+# Dar permisos de ejecución
+chmod +x backup-kitsu.sh
+
+# Ejecutar automáticamente cada día con cron
+crontab -e
+
+# Agregar esta línea (ejecuta todos los días a las 2 AM):
+0 2 * * * /home/adrian/Escritorio/AT/Kitsu-Test-01/backup-kitsu.sh
+
+═══════════════════════════════════════════════════════════════════════════════
+                          ANÁLISIS DE DATOS
+═══════════════════════════════════════════════════════════════════════════════
+
+Una vez volcados los datos, puedes analizarlos con:
+
+OPCIÓN 1: Python + Pandas
+--------------------------
+
+import pandas as pd
+import json
+
+# Cargar datos
+with open('animes.json') as f:
+    animes = json.load(f)
+
+df = pd.DataFrame(animes)
+
+# Análisis
+print(df.describe())
+print(df['tipo'].value_counts())
+print(df.nlargest(10, 'rating'))
+print(df.groupby('tipo')['rating'].mean())
+
+
+OPCIÓN 2: JavaScript
+---------------------
+
+const animes = require('./animes.json');
+
+// Top 10 por rating
+const top10 = animes
+  .sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating))
+  .slice(0, 10)
+  .map(a => ({ titulo: a.titulo, rating: a.rating }));
+
+console.table(top10);
+
+
+OPCIÓN 3: Excel / LibreOffice Calc
+-----------------------------------
+
+1. Abrir animes.json
+2. Usar "Importar datos JSON"
+3. Crear tablas dinámicas y gráficos
+
+═══════════════════════════════════════════════════════════════════════════════
+                          SOLUCIÓN DE PROBLEMAS
+═══════════════════════════════════════════════════════════════════════════════
+
+❌ Error: Cannot find module 'mongodb'
+💡 Solución: npm install mongodb
+
+❌ Error: Cannot find module 'mysql2'
+💡 Solución: npm install mysql2
+
+❌ Error: Cannot find module 'better-sqlite3'
+💡 Solución: npm install better-sqlite3
+
+❌ Error: ECONNREFUSED connecting to MongoDB
+💡 Solución: sudo systemctl start mongodb
+
+❌ Error: Access denied for user in MySQL
+💡 Solución: Verificar usuario y contraseña en la configuración
+
+❌ Error: Too many requests (429)
+💡 Solución: La API de Kitsu limita peticiones. El script ya incluye pausas.
+             Si persiste, aumenta el delay entre peticiones.
+
+═══════════════════════════════════════════════════════════════════════════════
+                          FIN DE LA GUÍA
+═══════════════════════════════════════════════════════════════════════════════

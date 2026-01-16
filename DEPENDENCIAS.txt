@@ -1,0 +1,145 @@
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                     KITSU API DOCS - DEPENDENCIAS INSTALADAS                  ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+Fecha de creación: 12 de enero de 2026
+Proyecto: Kitsu API Documentation & Testing
+Versión: 1.0.0
+Licencia: Apache-2.0
+
+═══════════════════════════════════════════════════════════════════════════════
+                            REQUISITOS DEL SISTEMA
+═══════════════════════════════════════════════════════════════════════════════
+
+- Node.js: >= 12.0.0 (recomendado: >= 16.0.0)
+- npm: >= 6.0.0 o yarn: >= 1.22.0
+- Git: >= 2.0.0
+- Sistema Operativo: Linux, macOS, Windows
+
+═══════════════════════════════════════════════════════════════════════════════
+                          DEPENDENCIAS DE PRODUCCIÓN
+═══════════════════════════════════════════════════════════════════════════════
+
+1. @redocly/openapi-cli (v1.0.0-beta.79)
+   ├─ Descripción: Herramienta CLI para trabajar con especificaciones OpenAPI
+   ├─ Uso: Bundling, linting y validación de archivos OpenAPI YAML
+   ├─ Comandos: openapi bundle, openapi lint
+   └─ Documentación: https://redocly.com/docs/cli/
+
+2. redoc-cli (v0.13.2)
+   ├─ Descripción: Generador de documentación API a partir de OpenAPI
+   ├─ Uso: Crear documentación HTML estática interactiva
+   ├─ Comandos: redoc-cli serve, redoc-cli bundle
+   └─ Documentación: https://github.com/Redocly/redoc
+
+═══════════════════════════════════════════════════════════════════════════════
+                         DEPENDENCIAS DE DESARROLLO
+═══════════════════════════════════════════════════════════════════════════════
+
+1. jest (v29.7.0)
+   ├─ Descripción: Framework de testing para JavaScript
+   ├─ Uso: Ejecutar pruebas unitarias y de integración
+   ├─ Comandos: jest, npm test
+   ├─ Características: Coverage, mocking, assertions
+   └─ Documentación: https://jestjs.io/
+
+2. @apidevtools/swagger-parser (v10.1.0)
+   ├─ Descripción: Parser y validador de esquemas OpenAPI/Swagger
+   ├─ Uso: Validar sintaxis y referencias en archivos OpenAPI
+   ├─ Funciones: validate(), parse(), dereference()
+   └─ Documentación: https://apitools.dev/swagger-parser/
+
+3. axios (v1.13.2)
+   ├─ Descripción: Cliente HTTP basado en promesas
+   ├─ Uso: Hacer peticiones a la API real de Kitsu para testing
+   ├─ Características: Interceptores, transformadores, timeout
+   └─ Documentación: https://axios-http.com/
+
+4. yaml (v2.3.4)
+   ├─ Descripción: Parser de archivos YAML para Node.js
+   ├─ Uso: Leer y procesar archivos YAML de configuración
+   └─ Documentación: https://eemeli.org/yaml/
+
+═══════════════════════════════════════════════════════════════════════════════
+                        DEPENDENCIAS TRANSITIVAS (PRINCIPALES)
+═══════════════════════════════════════════════════════════════════════════════
+
+Estas se instalan automáticamente con las dependencias principales:
+
+- chalk: Colorización de output en terminal
+- js-yaml: Parser YAML adicional
+- glob: Pattern matching de archivos
+- handlebars: Motor de plantillas
+- marked: Parser de Markdown
+- react: Librería UI para Redoc
+- react-dom: Renderizado de React
+- styled-components: CSS-in-JS para Redoc
+- yargs: Parser de argumentos CLI
+
+═══════════════════════════════════════════════════════════════════════════════
+                           COMANDOS DE INSTALACIÓN
+═══════════════════════════════════════════════════════════════════════════════
+
+# Instalación inicial completa
+npm install
+
+# O con yarn
+yarn install
+
+# Instalación solo de producción (sin testing)
+npm install --production
+
+# Instalación de dependencias individuales (si es necesario)
+npm install --save @redocly/openapi-cli@1.0.0-beta.79
+npm install --save redoc-cli@0.13.2
+npm install --save-dev jest@29.7.0
+npm install --save-dev @apidevtools/swagger-parser@10.1.0
+npm install --save-dev axios@1.13.2
+npm install --save-dev yaml@2.3.4
+
+═══════════════════════════════════════════════════════════════════════════════
+                              SCRIPTS DISPONIBLES
+═══════════════════════════════════════════════════════════════════════════════
+
+npm run build        → Bundlea los archivos YAML en un solo kitsu.yml
+npm run lint         → Valida el esquema OpenAPI
+npm run serve        → Inicia servidor de desarrollo de documentación
+npm run serve:bundle → Genera HTML estático de la documentación
+npm start            → Build + Lint + Serve (desarrollo completo)
+npm test             → Ejecuta todas las pruebas con Jest
+
+═══════════════════════════════════════════════════════════════════════════════
+                         VULNERABILIDADES CONOCIDAS
+═══════════════════════════════════════════════════════════════════════════════
+
+Estado actual: 21 vulnerabilidades detectadas
+- 1 low (baja)
+- 2 moderate (moderada)
+- 10 high (alta)
+- 8 critical (crítica)
+
+Nota: La mayoría son de dependencias transitivas de desarrollo y no afectan
+      el funcionamiento en producción. Para corregir:
+
+npm audit fix              → Corrige automáticamente las que se puedan
+npm audit fix --force      → Fuerza actualizaciones (puede romper cosas)
+npm audit                  → Ver detalles de las vulnerabilidades
+
+═══════════════════════════════════════════════════════════════════════════════
+                              TAMAÑO DEL PROYECTO
+═══════════════════════════════════════════════════════════════════════════════
+
+Total de paquetes instalados: ~602 paquetes
+Espacio en disco (node_modules): ~150-200 MB
+Archivos de proyecto: ~100 archivos YAML + tests
+
+═══════════════════════════════════════════════════════════════════════════════
+                                  SOPORTE
+═══════════════════════════════════════════════════════════════════════════════
+
+Documentación oficial: https://kitsu.docs.apiary.io/
+Repositorio GitHub: https://github.com/hummingbird-me/api-docs
+Discord: https://invite.gg/kitsu (canal #api)
+Contactos: @wopian, @matthewdias, @nuck en Kitsu
+
+═══════════════════════════════════════════════════════════════════════════════

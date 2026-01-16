@@ -1,0 +1,449 @@
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                   GUÍA DE USO - KITSU API TESTING & DOCUMENTATION             ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+═══════════════════════════════════════════════════════════════════════════════
+                           1. INSTALACIÓN INICIAL
+═══════════════════════════════════════════════════════════════════════════════
+
+# 1. Clonar el repositorio
+git clone https://github.com/hummingbird-me/api-docs.git
+cd api-docs
+
+# 2. Instalar dependencias
+npm install
+
+# 3. Verificar instalación
+npm test
+
+═══════════════════════════════════════════════════════════════════════════════
+                        2. EJECUTAR PRUEBAS DEL PROYECTO
+═══════════════════════════════════════════════════════════════════════════════
+
+# Ejecutar TODAS las pruebas
+npm test
+
+# Ejecutar solo pruebas del esquema OpenAPI
+npm test api-schema.test.js
+
+# Ejecutar solo pruebas de la API de anime
+npm test api-anime.test.js
+
+# Ejecutar con modo watch (se re-ejecuta al guardar cambios)
+npm test -- --watch
+
+# Ejecutar con información detallada
+npm test -- --verbose
+
+# Ver reporte de cobertura
+npm test -- --coverage
+
+═══════════════════════════════════════════════════════════════════════════════
+                    3. EJEMPLOS DE CONSULTAS A LA API DE KITSU
+═══════════════════════════════════════════════════════════════════════════════
+
+BASE URL: https://kitsu.io/api/edge
+
+HEADERS REQUERIDOS:
+  Accept: application/vnd.api+json
+  Content-Type: application/vnd.api+json
+
+──────────────────────────────────────────────────────────────────────────────
+3.1. OBTENER LISTA DE ANIMES
+──────────────────────────────────────────────────────────────────────────────
+
+# Obtener los primeros 20 animes (por defecto)
+GET https://kitsu.io/api/edge/anime
+
+# Obtener exactamente 10 animes
+GET https://kitsu.io/api/edge/anime?page[limit]=10
+
+# Obtener 5 animes saltando los primeros 10
+GET https://kitsu.io/api/edge/anime?page[limit]=5&page[offset]=10
+
+──────────────────────────────────────────────────────────────────────────────
+3.2. BUSCAR ANIMES POR TEXTO
+──────────────────────────────────────────────────────────────────────────────
+
+# Buscar "naruto"
+GET https://kitsu.io/api/edge/anime?filter[text]=naruto
+
+# Buscar "one piece" y limitar a 10 resultados
+GET https://kitsu.io/api/edge/anime?filter[text]=one%20piece&page[limit]=10
+
+# Buscar "dragon ball"
+GET https://kitsu.io/api/edge/anime?filter[text]=dragon%20ball
+
+──────────────────────────────────────────────────────────────────────────────
+3.3. FILTRAR POR CATEGORÍAS
+──────────────────────────────────────────────────────────────────────────────
+
+# Animes de acción
+GET https://kitsu.io/api/edge/anime?filter[categories]=action
+
+# Animes de aventura
+GET https://kitsu.io/api/edge/anime?filter[categories]=adventure
+
+# Animes de comedia (10 resultados)
+GET https://kitsu.io/api/edge/anime?filter[categories]=comedy&page[limit]=10
+
+# Animes de romance
+GET https://kitsu.io/api/edge/anime?filter[categories]=romance
+
+# Animes de ciencia ficción
+GET https://kitsu.io/api/edge/anime?filter[categories]=sci-fi
+
+──────────────────────────────────────────────────────────────────────────────
+3.4. FILTRAR POR TEMPORADA
+──────────────────────────────────────────────────────────────────────────────
+
+# Animes de primavera (spring)
+GET https://kitsu.io/api/edge/anime?filter[season]=spring
+
+# Animes de verano (summer)
+GET https://kitsu.io/api/edge/anime?filter[season]=summer
+
+# Animes de otoño (fall)
+GET https://kitsu.io/api/edge/anime?filter[season]=fall
+
+# Animes de invierno (winter)
+GET https://kitsu.io/api/edge/anime?filter[season]=winter
+
+# Animes de primavera 2020
+GET https://kitsu.io/api/edge/anime?filter[season]=spring&filter[seasonYear]=2020
+
+──────────────────────────────────────────────────────────────────────────────
+3.5. FILTRAR POR AÑO
+──────────────────────────────────────────────────────────────────────────────
+
+# Animes del año 2020
+GET https://kitsu.io/api/edge/anime?filter[seasonYear]=2020
+
+# Animes del año 2023 (10 resultados)
+GET https://kitsu.io/api/edge/anime?filter[seasonYear]=2023&page[limit]=10
+
+──────────────────────────────────────────────────────────────────────────────
+3.6. FILTRAR POR CLASIFICACIÓN DE EDAD
+──────────────────────────────────────────────────────────────────────────────
+
+# Animes clasificación G (General Audiences)
+GET https://kitsu.io/api/edge/anime?filter[ageRating]=G
+
+# Animes clasificación PG (Parental Guidance)
+GET https://kitsu.io/api/edge/anime?filter[ageRating]=PG
+
+# Animes clasificación R (Restricted)
+GET https://kitsu.io/api/edge/anime?filter[ageRating]=R
+
+──────────────────────────────────────────────────────────────────────────────
+3.7. FILTRAR POR SUBTIPO
+──────────────────────────────────────────────────────────────────────────────
+
+# Solo series de TV
+GET https://kitsu.io/api/edge/anime?filter[subtype]=TV
+
+# Solo películas
+GET https://kitsu.io/api/edge/anime?filter[subtype]=movie
+
+# Solo OVAs
+GET https://kitsu.io/api/edge/anime?filter[subtype]=OVA
+
+# Solo ONAs
+GET https://kitsu.io/api/edge/anime?filter[subtype]=ONA
+
+# Solo especiales
+GET https://kitsu.io/api/edge/anime?filter[subtype]=special
+
+──────────────────────────────────────────────────────────────────────────────
+3.8. ORDENAR RESULTADOS
+──────────────────────────────────────────────────────────────────────────────
+
+# Ordenar por popularidad (más popular primero)
+GET https://kitsu.io/api/edge/anime?sort=-userCount
+
+# Top 10 animes más populares
+GET https://kitsu.io/api/edge/anime?sort=-userCount&page[limit]=10
+
+# Ordenar por rating promedio (mejor calificados)
+GET https://kitsu.io/api/edge/anime?sort=-averageRating&page[limit]=10
+
+# Ordenar por fecha de inicio (más recientes primero)
+GET https://kitsu.io/api/edge/anime?sort=-startDate&page[limit]=10
+
+# Ordenar alfabéticamente (A-Z)
+GET https://kitsu.io/api/edge/anime?sort=canonicalTitle
+
+# Ordenar alfabéticamente (Z-A)
+GET https://kitsu.io/api/edge/anime?sort=-canonicalTitle
+
+──────────────────────────────────────────────────────────────────────────────
+3.9. OBTENER ANIME ESPECÍFICO POR ID
+──────────────────────────────────────────────────────────────────────────────
+
+# Obtener anime con ID 1 (Cowboy Bebop)
+GET https://kitsu.io/api/edge/anime/1
+
+# Obtener anime con ID 7442 (Attack on Titan)
+GET https://kitsu.io/api/edge/anime/7442
+
+──────────────────────────────────────────────────────────────────────────────
+3.10. INCLUIR RELACIONES
+──────────────────────────────────────────────────────────────────────────────
+
+# Incluir categorías
+GET https://kitsu.io/api/edge/anime/1?include=categories
+
+# Incluir personajes
+GET https://kitsu.io/api/edge/anime/1?include=animeCharacters
+
+# Incluir múltiples relaciones
+GET https://kitsu.io/api/edge/anime/1?include=categories,animeCharacters
+
+# Incluir episodios
+GET https://kitsu.io/api/edge/anime/1?include=episodes
+
+──────────────────────────────────────────────────────────────────────────────
+3.11. SELECCIONAR CAMPOS ESPECÍFICOS (Sparse Fieldsets)
+──────────────────────────────────────────────────────────────────────────────
+
+# Solo título y rating
+GET https://kitsu.io/api/edge/anime/1?fields[anime]=canonicalTitle,averageRating
+
+# Solo título, sinopsis y poster
+GET https://kitsu.io/api/edge/anime?fields[anime]=canonicalTitle,synopsis,posterImage&page[limit]=5
+
+──────────────────────────────────────────────────────────────────────────────
+3.12. COMBINACIÓN DE FILTROS
+──────────────────────────────────────────────────────────────────────────────
+
+# Top 10 animes de acción más populares
+GET https://kitsu.io/api/edge/anime?filter[categories]=action&sort=-userCount&page[limit]=10
+
+# Películas de anime del 2020, mejor calificadas
+GET https://kitsu.io/api/edge/anime?filter[subtype]=movie&filter[seasonYear]=2020&sort=-averageRating&page[limit]=10
+
+# Animes de comedia actuales (que están emitiéndose)
+GET https://kitsu.io/api/edge/anime?filter[categories]=comedy&filter[status]=current
+
+# Buscar "naruto", solo series TV, ordenadas por popularidad
+GET https://kitsu.io/api/edge/anime?filter[text]=naruto&filter[subtype]=TV&sort=-userCount
+
+═══════════════════════════════════════════════════════════════════════════════
+                    4. EJEMPLOS PRÁCTICOS CON CÓDIGO
+═══════════════════════════════════════════════════════════════════════════════
+
+──────────────────────────────────────────────────────────────────────────────
+4.1. EJEMPLO CON cURL
+──────────────────────────────────────────────────────────────────────────────
+
+# Obtener 10 animes
+curl -X GET "https://kitsu.io/api/edge/anime?page[limit]=10" \
+  -H "Accept: application/vnd.api+json" \
+  -H "Content-Type: application/vnd.api+json"
+
+# Buscar "naruto"
+curl -X GET "https://kitsu.io/api/edge/anime?filter[text]=naruto" \
+  -H "Accept: application/vnd.api+json"
+
+──────────────────────────────────────────────────────────────────────────────
+4.2. EJEMPLO CON JavaScript (axios)
+──────────────────────────────────────────────────────────────────────────────
+
+const axios = require('axios');
+
+const kitsuAPI = axios.create({
+  baseURL: 'https://kitsu.io/api/edge',
+  headers: {
+    'Accept': 'application/vnd.api+json',
+    'Content-Type': 'application/vnd.api+json'
+  }
+});
+
+// Obtener 10 animes
+async function get10Animes() {
+  const response = await kitsuAPI.get('/anime?page[limit]=10');
+  response.data.data.forEach(anime => {
+    console.log(anime.attributes.canonicalTitle);
+  });
+}
+
+// Buscar por categoría
+async function getAnimesByCategory(category) {
+  const response = await kitsuAPI.get(`/anime?filter[categories]=${category}&page[limit]=10`);
+  return response.data.data;
+}
+
+// Top 10 más populares
+async function getTop10Popular() {
+  const response = await kitsuAPI.get('/anime?sort=-userCount&page[limit]=10');
+  response.data.data.forEach((anime, index) => {
+    console.log(`${index + 1}. ${anime.attributes.canonicalTitle} - ${anime.attributes.userCount} usuarios`);
+  });
+}
+
+──────────────────────────────────────────────────────────────────────────────
+4.3. EJEMPLO CON Python (requests)
+──────────────────────────────────────────────────────────────────────────────
+
+import requests
+
+BASE_URL = 'https://kitsu.io/api/edge'
+HEADERS = {
+    'Accept': 'application/vnd.api+json',
+    'Content-Type': 'application/vnd.api+json'
+}
+
+# Obtener 10 animes
+def get_10_animes():
+    response = requests.get(f'{BASE_URL}/anime?page[limit]=10', headers=HEADERS)
+    data = response.json()
+    for anime in data['data']:
+        print(anime['attributes']['canonicalTitle'])
+
+# Buscar por texto
+def search_anime(query):
+    response = requests.get(f'{BASE_URL}/anime?filter[text]={query}', headers=HEADERS)
+    return response.json()['data']
+
+# Top 10 más populares
+def get_top_10_popular():
+    response = requests.get(f'{BASE_URL}/anime?sort=-userCount&page[limit]=10', headers=HEADERS)
+    data = response.json()
+    for i, anime in enumerate(data['data'], 1):
+        title = anime['attributes']['canonicalTitle']
+        users = anime['attributes']['userCount']
+        print(f"{i}. {title} - {users} usuarios")
+
+═══════════════════════════════════════════════════════════════════════════════
+                      5. CREAR NUEVAS PRUEBAS PERSONALIZADAS
+═══════════════════════════════════════════════════════════════════════════════
+
+Editar: tests/api-anime.test.js
+
+Ejemplo de nueva prueba:
+
+test('GET /anime - Top 10 de acción', async () => {
+  const response = await kitsuAPI.get('/anime?filter[categories]=action&sort=-userCount&page[limit]=10');
+  
+  expect(response.status).toBe(200);
+  expect(response.data.data.length).toBe(10);
+  
+  console.log('Top 10 animes de acción:');
+  response.data.data.forEach((anime, i) => {
+    console.log(`${i+1}. ${anime.attributes.canonicalTitle}`);
+  });
+}, 10000);
+
+Luego ejecutar:
+npm test api-anime.test.js
+
+═══════════════════════════════════════════════════════════════════════════════
+                          6. RESPUESTA TÍPICA DE LA API
+═══════════════════════════════════════════════════════════════════════════════
+
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "anime",
+      "links": {
+        "self": "https://kitsu.io/api/edge/anime/1"
+      },
+      "attributes": {
+        "createdAt": "2013-02-20T16:00:13.609Z",
+        "updatedAt": "2023-12-01T10:30:45.123Z",
+        "slug": "cowboy-bebop",
+        "synopsis": "In the year 2071...",
+        "canonicalTitle": "Cowboy Bebop",
+        "titles": {
+          "en": "Cowboy Bebop",
+          "en_jp": "Cowboy Bebop",
+          "ja_jp": "カウボーイビバップ"
+        },
+        "averageRating": "82.24",
+        "userCount": 123456,
+        "favoritesCount": 5678,
+        "startDate": "1998-04-03",
+        "endDate": "1999-04-24",
+        "popularityRank": 42,
+        "ratingRank": 28,
+        "ageRating": "R",
+        "ageRatingGuide": "17+ (violence & profanity)",
+        "subtype": "TV",
+        "status": "finished",
+        "episodeCount": 26,
+        "episodeLength": 24,
+        "posterImage": {
+          "tiny": "https://...",
+          "small": "https://...",
+          "medium": "https://...",
+          "large": "https://...",
+          "original": "https://..."
+        }
+      },
+      "relationships": {
+        "categories": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/anime/1/relationships/categories",
+            "related": "https://kitsu.io/api/edge/anime/1/categories"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "count": 15234
+  },
+  "links": {
+    "first": "https://kitsu.io/api/edge/anime?page[limit]=20&page[offset]=0",
+    "next": "https://kitsu.io/api/edge/anime?page[limit]=20&page[offset]=20",
+    "last": "https://kitsu.io/api/edge/anime?page[limit]=20&page[offset]=15220"
+  }
+}
+
+═══════════════════════════════════════════════════════════════════════════════
+                             7. TIPS Y BUENAS PRÁCTICAS
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ Siempre incluye los headers Accept y Content-Type
+✅ Usa page[limit] para controlar cuántos resultados obtienes
+✅ Combina filtros para búsquedas más específicas
+✅ Usa sort para ordenar los resultados
+✅ Usa fields para obtener solo los datos que necesitas (ahorra ancho de banda)
+✅ Incluye relaciones solo cuando las necesites (include=)
+✅ Los nombres de categorías deben estar en minúsculas y con guiones
+✅ Codifica URLs correctamente (%20 para espacios, etc.)
+
+❌ No hagas demasiadas peticiones seguidas (respeta rate limits)
+❌ No olvides manejar errores (404, 500, etc.)
+❌ No asumas que todos los campos estarán presentes (algunos pueden ser null)
+
+═══════════════════════════════════════════════════════════════════════════════
+                                8. SOLUCIÓN DE PROBLEMAS
+═══════════════════════════════════════════════════════════════════════════════
+
+Problema: Error 400 (Bad Request)
+Solución: Verifica que los parámetros estén correctamente formateados
+
+Problema: Error 404 (Not Found)
+Solución: Verifica que el ID o endpoint exista
+
+Problema: Tests lentos
+Solución: Reduce el timeout o limita el número de resultados
+
+Problema: "Cannot find module"
+Solución: Ejecuta npm install de nuevo
+
+═══════════════════════════════════════════════════════════════════════════════
+                                  9. RECURSOS ÚTILES
+═══════════════════════════════════════════════════════════════════════════════
+
+📚 Documentación oficial: https://kitsu.docs.apiary.io/
+📚 Especificación JSON:API: https://jsonapi.org/
+📚 Repositorio GitHub: https://github.com/hummingbird-me/api-docs
+📚 Discord: https://invite.gg/kitsu
+📚 Sitio web: https://kitsu.io
+
+═══════════════════════════════════════════════════════════════════════════════
+                                FIN DE LA GUÍA
+═══════════════════════════════════════════════════════════════════════════════
